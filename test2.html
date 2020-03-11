@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
+<script src="index.js"></script>
 
-<script src>
+<form>
 
 
-<select onchange="show(this.value)">
-    <option value="Электроник">Электроник</option>
-    <option value="Сыроежкин">Сыроежкин</option>
-    <option value="Чижиков">Чижиков</option>
-    <option value="Кукушкина">Кукушкина</option>
-</select>
+<input id = 'eds' type="text" size="40" value="" onchange = "f3()">
+<input  type="button" value="Добавить" onclick="f(eds.value)" id="addtxt">
+<input  type="button" value="Заполнить" onclick="f1()">
+<input  type="button" value="Редактировать" onclick="f2(eds.value)">
+
+<div>
+
+    <select id="mySelectId" name="mySelect" onchange="show(this.value)" >
+
+    </select>
+
+</div>
+
+</form>
 
 </body>
 </html>
