@@ -456,17 +456,15 @@ function show(text){
 
 function f(str) { // добавить элемент в конец
 
-    let selectedOption = mySelectId.options[mySelectId.selectedIndex];
-    show(str);
-    // 2)
-    let newOption = new Option(str,str);
-    mySelectId.append(newOption);
+        let selectedOption = mySelectId.options[mySelectId.selectedIndex];
+        show(str);
+        // 2)
+        let newOption = new Option(str,str);
+        mySelectId.append(newOption);
 
-    // 3)
-    newOption.selected = true;
-    addtxt.disabled="disabled";
-    InFull.disabled="disabled";
-
+       // 3)
+        newOption.selected = true;
+        InFull.disabled="disabled";
 }
 
 function f1() { // заполнить выпадающий список именами домами
@@ -475,7 +473,8 @@ function f1() { // заполнить выпадающий список имен
     for(let i = 0; i < (arr.length); i++){
         f(arr[i])
     }
-
+    addtxt.disabled="disabled";
+    InFull.disabled="disabled";
 }
 
 function f2(hmname) {//меняет имя дома
