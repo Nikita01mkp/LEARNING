@@ -450,19 +450,22 @@ function searchHome(homes, _ID){
 
 function show(text){
     alert(text);
+    eds.value = text;
 }
 
 
 function f(str) { // добавить элемент в конец
 
     let selectedOption = mySelectId.options[mySelectId.selectedIndex];
-    alert(str);
+    show(str);
     // 2)
     let newOption = new Option(str,str);
     mySelectId.append(newOption);
 
     // 3)
     newOption.selected = true;
+    addtxt.disabled="disabled";
+    InFull.disabled="disabled";
 
 }
 
@@ -481,7 +484,7 @@ function f2(hmname) {//меняет имя дома
         document.getElementById("eds").style.borderColor = '';
         home[mySelectId.selectedIndex].homeName = hmname;
         mySelectId.options[mySelectId.selectedIndex].text = hmname;
-        addtxt.visible = false;
+        mySelectId.options[mySelectId.selectedIndex].value = hmname;
     } else{document.getElementById("eds").style.borderColor = 'red';}
 
 }
