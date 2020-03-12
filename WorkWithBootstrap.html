@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+<script src="main.js"></script>
+
+<div style="width: 250px; padding: 10px;">
+    <h1>Home</h1>
+    <select class="form-control" style="text-align-last: center" id="mySelectId" onchange="f(this.value)">
+
+        <option>Test 3</option>
+        <option>New TEST</option>
+        <option>New TEST</option>
+        <option>Test 3</option>
+
+    </select>
+</div>
+
+<div style="padding: 10px;width: 600px">
+    <h1>Edit home</h1>
+    <div style="display: flex;">
+        <input class="form-control" id="eds1" onkeydown="f3()" placeholder="Inter the home name">
+        <input type="button" value="Save" class="btn btn-light" onclick="f2(eds1.value)" id="btn">
+    </div>
+</div>
+
+
+
+</body>
+</html>
+
