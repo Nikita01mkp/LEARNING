@@ -7,13 +7,13 @@ function show(text){
 function f(str) { // добавить элемент в конец
 
     let selectedOption = mySelectId.options[mySelectId.selectedIndex];
-    alert(str);
     // 2)
     let newOption = new Option(str,str);
     mySelectId.append(newOption);
 
     // 3)
     newOption.selected = true;
+    nameid.value = '';
 
 }
 
