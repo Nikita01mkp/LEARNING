@@ -1,6 +1,6 @@
 var Task5 = angular.module('Task5', []);
 
-Task5.controller('CtrlT5', function CtrlT5 ($scope) {
+Task5.controller('CtrlT5', function CtrlT5($scope) {
     $scope.home =
         [{
             "_id": "58873bae28f4bf912185591b",
@@ -436,10 +436,10 @@ Task5.controller('CtrlT5', function CtrlT5 ($scope) {
         }];
 
 
-    $scope.arrofhm = function() { //возвращает массив с названием домов
+    $scope.arrofhm = function () { //возвращает массив с названием домов
 
         let arr = [];
-        for(let i = 0; i < $scope.home.length; i++){
+        for (let i = 0; i < $scope.home.length; i++) {
             arr[i] = $scope.home[i].homeName;
         }
         return arr
@@ -450,29 +450,28 @@ Task5.controller('CtrlT5', function CtrlT5 ($scope) {
     $scope.input = $scope.mas[0];
     $scope.SelectedHome = '';
     $scope.selectedIndex = 0;
+    $scope.hasError = '';
 
     $scope.GetInd = function (i) {
-        console.log('It is worki' , i);
         $scope.input = $scope.mas[i];
         $scope.selectedIndex = i;
-        console.log('It is worki' ,$scope.SelectedHome)
     };
 
-    $scope.ReName = function () {
+    $scope.Save = function () {
 
-        if(($scope.input != '')  && ($scope.input.replace(/\s+/g,'') != 0)){$scope.mas[$scope.selectedIndex] = $scope.input;}
-        else {
-            document.getElementById("eds1").style.borderColor = 'red';
-            document.getElementById("eds2").style.borderColor = 'red';
+        if (($scope.input != '') && ($scope.input.replace(/\s+/g, '') != 0)) {
+            $scope.mas[$scope.selectedIndex] = $scope.input;
+        } else {
+            $scope.hasError = 'has-error';
+            $scope.hasErrorBtn = 'has-error';
         }
 
     }
 
+
     $scope.bkCol = function () {
-
-        document.getElementById("eds1").style.borderColor = '';
-        document.getElementById("eds2").style.borderColor = '';
-
+        $scope.hasError = '';
+        $scope.hasErrorBtn = '';
     }
 
 })

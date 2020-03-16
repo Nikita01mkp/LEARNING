@@ -3,35 +3,37 @@
 <head>
     <meta charset="utf-8">
     <title>My HTML File</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-    <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <script src = "./Task5.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./task5.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="./Task5.js"></script>
 </head>
-<body  ng-controller="CtrlT5">
+<body ng-controller="CtrlT5">
 
 
-<div style="padding: 10px;width: 250px" >
-    <h1>Home:</h1>
-<!--    <select class="form-control" style="text-align-last: center" ng-model = "SelectedHome" ng-options=" home as home for mas track by $index" ng-change="GetInd($index)" >-->
-<!--        <option value="" hidden>Choose home:</option>-->
-<!--&lt;!&ndash;        <option  ng-repeat ="Homes in mas  track by $index" ng-click="GetInd($index)" >{{Homes}}</option>&ndash;&gt;-->
-<!--    </select>-->
-    <select class="form-control"  ng-init="SelectedHome = 1" style="text-align-last: center" ng-model = "SelectedHome" ng-change="GetInd(SelectedHome)">
+<div style="padding: 10px;width: 250px">
+    <h1>Home</h1>
+    <label>
+        <select class="form-control" ng-init="SelectedHome = 1" style="text-align-last: center" ng-model="SelectedHome"
+                ng-change="GetInd(SelectedHome)">
 
-        <option value="{{$index}}" ng-repeat ="Homes in mas  track by $index" >{{Homes}}</option>
-    </select>
+            <option value="{{$index}}" ng-repeat="Homes in mas  track by $index">{{Homes}}</option>
+        </select>
+    </label>
 
 </div>
 
 <div style="padding: 10px;width: 600px">
     <h1>Edit home</h1>
-    <div style="display: flex;" class="input-group">
-        <input class="form-control" ng-chane="" placeholder="Inter the home name" ng-model = "input" id = "eds1" ng-change = "bkCol()">
-        <div class="input-group-append"><input type="button" value="Save" class="btn btn-light" ng-click = "ReName()" ng-model="baton"  id = "eds2"></div>
+    <div style="display: flex;" class="input-group" >
+        <input class="form-control" placeholder="Inter the home name" ng-model="input"
+               ng-change="bkCol()" ng-class="hasError">
+        <div class="input-group-append">
+            <button class="input-group-text" ng-click="Save()" ng-model="baton" ng-class="hasErrorBtn">Save</button>
+        </div>
     </div>
+
 </div>
-
-
 
 
 

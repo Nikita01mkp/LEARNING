@@ -1,0 +1,8 @@
+.has-error {
+    border-color: red;
+
+}
+
+input:focus {
+    box-shadow: none !important;
+}
