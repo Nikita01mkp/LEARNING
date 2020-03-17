@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" ng-app="Task1">
+<head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="./Task1.js"></script>
+</head>
+<body ng-controller="CtrlT1">
+
+<form >
+<center>
+    <div style="padding: 10px;width: 350px; background: azure" class="needs-validation" novalidate>
+        <div class="form-group" >
+            <label>Login</label>
+            <input type="text" class="form-control" ng-class="hasErrLog" ng-model="login" ng-change = "validBack('1')">
+            <div class="invalid-feedback">
+                Please provide a valid Login.
+            </div>
+        </div>
+
+        <div class="form-group">
+             <label>Password</label>
+             <input type="password" class="form-control" ng-class="hasErrPass" ng-model="password"
+                    ng-change = "validBack('2')">
+             <div class="invalid-feedback">
+                Please provide a valid Password.
+             </div>
+         </div>
+
+        <div class="form-group">
+            <label>Repeat Password</label>
+            <input type="password" class="form-control" ng-class="hasErrPass" ng-model="rePassword"
+                   ng-change = "validBack('2')">
+            <div class="invalid-feedback">
+                Please provide a valid Password.
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                   ng-class="hasErrMail" ng-model="mail" ng-change = "validBack('3')">
+            <div class="invalid-feedback">
+                Please provide a valid Email.
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div style="padding: 10px;width: 350px; background: aqua">
+
+        <div class="form-group" >
+            <label>How odl is you</label>
+            <input type="text" class="form-control" ng-model="old">
+        </div>
+
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" ng-model="name">
+        </div>
+
+    </div>
+    <button class="btn btn-primary" type="submit" ng-click="send()">Submit form</button>
+    <button class="btn btn-primary" type="submit" ng-click="Show()">Show</button>
+</center>
+</form>
+
+</body>
+
+</html>
