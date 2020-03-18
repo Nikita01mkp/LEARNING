@@ -69,14 +69,6 @@ Task1.controller('CtrlT1', function CtrlT1($scope) {
         }
 
     }
-    $scope.Show = function () {
-        let a = JSON.parse(localStorage.getItem($scope.name))
-        alert(a.userPassword);
-
-
-
-
-    }
 
 
 

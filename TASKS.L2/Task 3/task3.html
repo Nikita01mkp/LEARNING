@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" ng-app="Task3">
+<head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="task3.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+    <script src="./task3.js"></script>
+</head>
+<body ng-controller="CtrlT3" background="fon.jpg">
+
+<form>
+    <div class="parent">
+        <div class="block">
+            <h1 style="font-size: 50pt; color: white">My account</h1>
+            <div>
+                <div class="feedback">
+                    Name:
+                </div>
+                <input class="form-control" ng-model="name" placeholder="Inter your name">
+                <button class="btn btn-success" ng-click = "changeName()">Change</button>
+
+            </div>
+
+            <div>
+                <div class="feedback">
+                    Age:
+                </div>
+                <input class="form-control" ng-model="age" placeholder="Inter your age">
+                <button class="btn btn-success" ng-click = "changeAge()">Change</button>
+            </div>
+
+            <div>
+                <div class="feedback">
+                    Gender:
+                </div>
+                <input class="form-control" ng-model="gender" placeholder="Inter your gender">
+                <button class="btn btn-success" ng-click = "changeGender()">Change</button>
+            </div>
+
+            <div>
+                <div class="feedback">
+                    Old password:
+                </div>
+                <input class="form-control" ng-model="oldPassword" placeholder="Inter your old password" type="password">
+            </div>
+
+            <div>
+                <div class="feedback">
+                    New password:
+                </div>
+                <input class="form-control" ng-model="newPassword" placeholder="Inter new password" type="password">
+            </div>
+
+            <div>
+                <div class="feedback">
+                    Repeat new password:
+                </div>
+                <input class="form-control" ng-model="reNewPassword" placeholder="Repeat new password" type="password">
+                <button class="btn btn-success" ng-click = "changePass()">Change</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+</body>
+</html>
